@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Pizza</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ip">ip</string>
+    <string name="port">port</string>
+    <string name="connect">connect</string>
+    <string name="go_to_cart">Go to cart</string>
+    <string name="price">%s BYN</string>
+    <string name="sum">%.2f BYN</string>
+    <string name="count">x%s</string>
+    <string name="total_cost">Общая стоимость ( %d товаров ):</string>
+    <string name="error_name">Введите имя!</string>
+    <string name="error_number">Введите номер!</string>
+    <string name="error_number_length">Введён не корректно номер</string>
+    <string name="error_address">Введите адрес!</string>
+</resources>

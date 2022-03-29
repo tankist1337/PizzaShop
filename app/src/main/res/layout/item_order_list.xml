@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="order"
+            type="com.example.pizzashop.model.Order" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/button_add"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                android:id="@+id/pizza_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:textStyle="bold"
+                android:paddingTop="@dimen/base_margin"
+                android:text='@{order.pizza.name}'
+                android:textAppearance="?attr/textAppearanceBody1"
+                tools:text="ПЕППЕРОНИ" />
+
+                <TextView
+                    android:id="@+id/count_pizza"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingTop="@dimen/base_margin"
+                    android:textStyle="bold"
+                    android:text="@{@string/count(order.count)}"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:textColor="@color/purple_500"
+                    tools:text="x10" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pizza_description"
+                style="@style/Widget.MenuItem.TextView.Info"
+                android:paddingStart="16dp"
+                android:paddingTop="@dimen/base_margin"
+                android:text='@{order.pizza.description}'
+                tools:text="Соус томатный, сыр твердый, салями, пряности." />
+
+            <TextView
+                android:id="@+id/pizza_price"
+                style="@style/Widget.MenuItem.TextView.Info"
+                android:paddingStart="16dp"
+                android:paddingTop="@dimen/base_margin"
+                android:text="@{@string/price(order.pizza.price)}"
+                tools:text="12.9 BYN" />
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/button_add"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:backgroundTint="@null"
+            android:src="@drawable/add_item"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:id="@+id/button_remove"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:backgroundTint="@null"
+            android:src="@drawable/remove_item"
+            app:layout_constraintBottom_toTopOf="@+id/button_add"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            style="@style/Widget.LunchTray.Divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/base_margin"
+            android:layout_marginEnd="8dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/button_add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear_layout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
