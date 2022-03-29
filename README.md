@@ -2,6 +2,7 @@
 A client application that communicates with PizzaServer (https://github.com/tankist1337/PizzaServer.git), through which a list of pizzas can be obtained and then, by selecting the desired ones, orders can be placed.
 
 Sreenshots:
+
 ![splashscreen](https://user-images.githubusercontent.com/99079470/160596642-b5d20b95-4e37-4df1-ba42-27a441bcdc05.jpg)
 ![loginScreen](https://user-images.githubusercontent.com/99079470/160596656-15d39ed5-0379-4dc1-8dad-4b7bbc604b6d.jpg)
 ![menuScreen](https://user-images.githubusercontent.com/99079470/160596674-6b896d03-f96a-4ff4-8870-6ed904b15eb0.jpg)
